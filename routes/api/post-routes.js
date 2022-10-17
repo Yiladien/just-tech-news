@@ -4,6 +4,7 @@ const sequelize = require("../../config/connection");
 
 // get all users
 router.get("/", (req, res) => {
+  console.log("======================");
   Post.findAll({
     // update the `.findAll()` method's attributes to look like this
     attributes: [
@@ -27,6 +28,10 @@ router.get("/", (req, res) => {
           model: User,
           attributes: ["username"],
         },
+      },
+      {
+        model: User,
+        attributes: ["username"],
       },
       {
         model: User,
@@ -66,6 +71,10 @@ router.get("/:id", (req, res) => {
           model: User,
           attributes: ["username"],
         },
+      },
+      {
+        model: User,
+        attributes: ["username"],
       },
       {
         model: User,
