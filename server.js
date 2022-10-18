@@ -3,7 +3,7 @@ const routes = require("./routes");
 const sequelize = require("./config/connection");
 
 const app = express();
-const PORT = process.env.PORT || port;
+const PORT = process.env.JAWSDB_URL || port;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
